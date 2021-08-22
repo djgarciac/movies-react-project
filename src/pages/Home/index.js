@@ -10,7 +10,7 @@ import {
 import styles from './style';
 import { MovieIcon } from '../../icons';
 
-const Home = () => {
+const Home = ({history}) => {
   const [searchText, setSearchText] = useState('');
   const classes = styles();
 
@@ -18,9 +18,13 @@ const Home = () => {
     setSearchText(event.target.value);
   };
 
-  const handleCleanTextClick = () => {};
+  const handleCleanTextClick = () => {
+    setSearchText('');
+  };
 
-  const handleSearchTextClick = () => {};
+  const handleSearchTextClick = () => {
+    history.push(`/results?movieName=${searchText}`)
+  };
 
   return (
     <Container className={classes.container}>
@@ -43,12 +47,14 @@ const Home = () => {
 
         <Grid className={classes.buttonsContainer}>
           <Button
+            type="button"
             variant="contained"
             onClick={handleCleanTextClick}
           >
             Limpiar
           </Button>
           <Button
+            type="button"
             variant="contained"
             color="primary"
             size="large"

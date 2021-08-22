@@ -4,13 +4,15 @@ import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Home from './pages/Home';
+import Results from './pages/Results';
 
 const App = ({ store }) => (
 	<Provider store={store}>
 		<Router>
-			<div>
+			<>
 				<Route exact path="/" component={Home} />
-			</div>
+				<Route path="/results" component={Results} />
+			</>
 		</Router>
 	</Provider>
 );
