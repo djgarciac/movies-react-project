@@ -33,6 +33,9 @@ export default makeStyles({
   },
   searchButton: {
     marginLeft: '.5rem'
+  },
+  movieIcon: {
+    fontSize: '4rem'
   }
 });
 

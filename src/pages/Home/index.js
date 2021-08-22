@@ -8,6 +8,7 @@ import {
   Button
 } from '@material-ui/core';
 import styles from './style';
+import { MovieIcon } from '../../icons';
 
 const Home = () => {
   const [searchText, setSearchText] = useState('');
@@ -29,7 +30,7 @@ const Home = () => {
             <Typography className={classes.title}>Bienvenido</Typography>
           </Grid>
           <Grid>
-            <label>Icono</label>
+            <MovieIcon className={classes.movieIcon} />
           </Grid>
         </Grid>
 
