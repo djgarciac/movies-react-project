@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container, Typography } from '@material-ui/core';
 
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <Container>
+      <Typography variant="h1">Home</Typography>
+    </Container>
   );
 };
 
