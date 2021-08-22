@@ -1,6 +1,6 @@
 import * as types from '../../consts/actionTypes';
 
-export default function(state = [], action) {
+const demoReducer = (state = [], action) => {
 	switch (action.type) {
 		case types.GET_DEMO_REQUEST:
 			return [...state];
@@ -13,3 +13,5 @@ export default function(state = [], action) {
 			return state;
 	}
 }
+
+export default demoReducer;
